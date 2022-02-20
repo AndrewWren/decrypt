@@ -156,7 +156,7 @@ def add_args(parser: argparse.ArgumentParser):
                         help='Metric to track for early stopping, assumes lower is better')
     parser.add_argument('--grad_accum_steps',
                         type=int,
-                        default=1,
+                        default=2,  # 1
                         help='Number of batches to accumulate')
     # default to don't use
     parser.add_argument('--comment',
@@ -194,7 +194,8 @@ def get_args(extra_args_fn=None):
             # args.project = "cryptics_train"
             # ada_constant is False (i.e. we use relative step)
             args.generation_beams = 5
-            args.batch_size = 256       # alternatively can do 128 and accum_steps=2
+            args.batch_size = 128  # 256       # alternatively can do 128 and
+            # accum_steps=2
             # grad_accum_steps = 1
             # args.num_epochs = 15
             # default model is t5-base
@@ -223,7 +224,8 @@ def get_args(extra_args_fn=None):
         if args.default_val == 'base':
             # args.project = "cryptics_val"
             args.generation_beams = 100
-            args.batch_size = 16            # can change this depending on your GPU; doesn't affect results
+            args.batch_size = 4  # 16            # can change this depending
+            # on your GPU; doesn't affect results
             # default model is t5-base
         elif args.default_val == 'cryptonite':
             # default for cryptonite eval
