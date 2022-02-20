@@ -1,0 +1,15 @@
+# With wrong 3.10
+
+python train_clues.py --default_train=base --name=baseline_naive_nolens --project=baseline --wandb_dir=./wandb --data_dir=./data/clue_json/guardian/word_initial_disjoint --special=no_lens
+
+python train_clues.py --default_val=base --name=baseline_naive_val --project=baseline --wandb_dir=./wandb --data_dir='../data/clue_json/guardian/naive_random' --ckpt_path='./wandb/wandb/run-20220216_163819-3p13bn7h/files/epoch_23.pth.tar'
+
+'./wandb/wandb/20220218_202358-2grdl91s/files/epoch_11.00_11.pth.tar'
+
+python train_clues.py --default_val=base --name=baseline_naive_val --project=baseline --data_dir='../data/clue_json/guardian/naive_random' --ckpt_path='./wandb/wandb/20220218_202358-2grdl91s/files/epoch_11.00_11.pth.tar' --wandb_dir='./wandb/wandb/'
+
+--default_val=base --name=baseline_naive_val --project=baseline --data_dir=../data/clue_json/guardian/naive_random --ckpt_path=./wandb/wandb/20220218_202358-2grdl91s/files/epoch_11.00_11.pth.tar --wandb_dir=./wandb/wandb/
+
+# Now with correct 3.8
+
+./wandb/wandb/run-20220219_130020-1i5nwcxm/files/epoch_11.pth.tarpreds.json

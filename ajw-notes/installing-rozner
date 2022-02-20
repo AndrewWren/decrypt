@@ -1,0 +1,40 @@
+# OS
+Btw what OS are we all using?  I'm using Linux Mint 20.3
+
+# Installing
+
+python==3.8.12
+conda install jupyter
+conda install pytorch torchvision cudatoolkit=11.3 -c pytorch
+conda install scikit-learn-intelex
+conda install tqdm
+pip install pyenchant 
+conda install -c huggingface transformers==4.11.3
+conda install -c conda-forge wandb==0.10.13  # .0
+conda install -c conda-forge bs4==4.10.0
+conda install -c conda-forge overrides==3.1.0
+conda install -c conda-forge jellyfish
+conda install -c conda-forge multiset
+conda install -c conda-forge nltk==3.5
+conda install -c conda-forge lemminflect 
+
+# Running
+
+I ran in PyCharm Professional on Linux Mint
+
+In terminal, do `wandb login` and follow instructions
+In Python console, do `import nltk`, `nltk.download('wordnet')`, `nltk.download('omw-1.4')`
+Do *Preparing data* from the README
+Do *Reproducing our splits* from the README
+Ran `./baselines/baseline_knn.ipynb`: problems:
+- no definition of `train` variable for cells 8 onwards
+- poss problem. no gsheets writer.  See line 32 of ./decrypt/common/validation_tools.py which says not yet included in public repo.
+
+# Debug
+
+'./wandb/wandb/run-20220218_194114-plpx7afx/files/media/graph/graph_0_summary_126b3b4a.graph.json'
+'./wandb/wandb/run-20220218_194114-plpx7afx/files/ckpt_dev_num_match_top_sampled_270.00_11.pth.tar.preds.json'
+'./wandb/wandb/run-20220218_194114-plpx7afx/files/ckpt_dev_num_match_top_sampled_270.00_11.pth.tar.preds.json'
+'./wandb/wandb/run-20220218_194114-plpx7afx/files/ckpt_dev_num_match_top_sampled_270.00_11.pth.tar.preds.json' PROBLEM
+
+

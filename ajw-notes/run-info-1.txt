@@ -1,0 +1,126 @@
+total_train_steps (num_train_ex * epochs): 427140
+machine: lt-17
+num_train: 85428
+num_val: 28476ada: True
+ada_constant: False
+add_special_tokens: False
+batch_size: 128
+batched_dl: True
+ckpt_path: None
+comment: 
+data_dir: ../data/clue_json/guardian/naive_random
+default_train: base
+default_val: None
+dev_run: False
+do_sample: True
+do_save: True
+early_stopping: None
+fast_tokenizer: True
+generation_beams: 5
+grad_accum_steps: 2
+hacky: False
+model_name: t5-base
+multi_gpu: None
+multitask: None
+multitask_num: -1
+name: baseline_naive
+no_train: False
+num_epochs: 15
+num_train: 85428
+num_val: 28476
+num_workers: 4
+project: baseline
+resume_train: None
+seed: 42
+special: None
+test: False
+total_train: 427140
+use_json: True
+val_freq: None
+wandb_dir: ./wandb
+No aux config (e.g. multitask) give
+
+
+# Train
+	./wandb/wandb/run-20220219_171726-22ve6u0u/files/epoch_23.pth.tar
+	./wandb/wandb/run-20220219_171726-22ve6u0u/files/ckpt_dev_num_match_top_sampled_4410.00_23.pth.tar
+[02.19 19:06:07] [train_clues.py:113 - post_run()]	 for final validation:
+	./wandb/wandb/run-20220219_171726-22ve6u0u/files/epoch_23.pth.tarpreds.json
+
+wandb: Waiting for W&B process to finish, PID 21709
+wandb: Program ended successfully.
+wandb:                                                                                
+
+wandb: Find user logs for this run at: ./wandb/wandb/run-20220219_171726-22ve6u0u/logs/debug.log
+wandb: Find internal logs for this run at: ./wandb/wandb/run-20220219_171726-22ve6u0u/logs/debug-internal.log
+wandb: Run summary:
+wandb:                                                         dev/num_match_top_sampled 0.15304
+wandb:                                                           dev/num_match_in_sample 0.21583
+wandb:                                                                    train/loss_all 0.49443
+wandb:                                                                             epoch 25
+wandb:                                                        dev/num_exact_match_char_2 0.11469
+wandb:                                                       dev/num_match_top_5_sampled 0.21583
+wandb:                                                            dev/pct_correct_length 0.49654
+wandb:                                                            dev/pct_correct_wordct 0.97389
+wandb:                                                                           dev/NLL 3.09848
+wandb:                                                                             _step 1281420
+wandb:                                                                          _runtime 6521
+wandb:                                                                        _timestamp 1645297567
+wandb: Run history:
+wandb:                train/loss_all █▇▆▆▆▅▄▄▃▃▂▂▁▂▁
+wandb:                         epoch ▁▁▂▃▃▃▄▅▅▅▆▇▇▇█
+wandb:    dev/num_exact_match_char_2 ▁▁▂▂▃▄▅▆▇▇█▇███
+wandb:       dev/num_match_in_sample ▁▂▃▄▅▆▇▇███████
+wandb:     dev/num_match_top_sampled ▁▂▃▄▅▆▇▇███████
+wandb:   dev/num_match_top_5_sampled ▁▂▃▄▅▆▇▇███████
+wandb:        dev/pct_correct_length ▁▂▃▄▅▆▆▇▇▇█▇█▇█
+wandb:        dev/pct_correct_wordct ▁▅▇████████████
+wandb:                       dev/NLL █▅▃▂▂▁▁▁▂▂▄▄▅▇█
+wandb:                         _step ▁▁▂▃▃▃▄▅▅▅▆▇▇▇█
+wandb:                      _runtime ▁▂▂▃▃▄▄▅▅▆▆▇▇██
+wandb:                    _timestamp ▁▂▂▃▃▄▄▅▅▆▆▇▇██
+wandb: 
+wandb: Synced 5 W&B file(s), 1 media file(s), 0 artifact file(s) and 7 other file(s)
+wandb: 
+wandb: Synced baseline_naive: https://wandb.ai/andrewwren/baseline/runs/22ve6u0u
+
+# Eval
+wandb: Waiting for W&B process to finish, PID 53155
+wandb: Program ended successfully.
+wandb:                                                                                
+wandb: Find user logs for this run at: ./wandb/wandb/wandb/run-20220219_200238-1jwy2zzn/logs/debug.log
+wandb: Find internal logs for this run at: ./wandb/wandb/wandb/run-20220219_200238-1jwy2zzn/logs/debug-internal.log
+wandb: Run summary:
+wandb:                                                         dev/num_match_top_sampled 0.15803
+wandb:                                                           dev/num_match_in_sample 0.43756
+wandb:                                                        dev/num_exact_match_char_2 0.11582
+wandb:                                                                             epoch 11
+wandb:                                                       dev/num_match_top_5_sampled 0.27097
+wandb:                                                            dev/pct_correct_length 0.4472
+wandb:                                                            dev/pct_correct_wordct 0.9706
+wandb:                                                                           dev/NLL 2.85178
+wandb:                                                                             _step 0
+wandb:                                                                          _runtime 4685
+wandb:                                                                        _timestamp 1645305643
+wandb: Run history:
+wandb:    dev/num_exact_match_char_2 ▁
+wandb:                         epoch ▁
+wandb:       dev/num_match_in_sample ▁
+wandb:     dev/num_match_top_sampled ▁
+wandb:   dev/num_match_top_5_sampled ▁
+wandb:        dev/pct_correct_length ▁
+wandb:        dev/pct_correct_wordct ▁
+wandb:                       dev/NLL ▁
+wandb:                         _step ▁
+wandb:                      _runtime ▁
+wandb:                    _timestamp ▁
+wandb: 
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 3 other file(s)
+wandb: 
+wandb: Synced baseline_naive_val: https://wandb.ai/andrewwren/baseline/runs/1jwy2zzn
+
+
+# For metrics
+
+seq2seq/wandb/wandb/wandb/run-20220219_200238-1jwy2zzn/files/epoch_11.pth.tar.preds
+
